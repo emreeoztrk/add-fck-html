@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Turret+Road:wght@500&display=swap');
+
+body {
+    background-color: #000000;
+    margin: 0px;
+    bottom: 0px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #262525;
+}
+
+section {
+    width: 100%;
+    height: 95vh;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #040404;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    padding: 0px 5%;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li a {
+    margin: 30px;
+    font-family: sans-serif;
+    color: #505050;
+    font-weight: 700;
+
+}
+
+.logo {
+    font-family: 'Turret Road', cursive;
+    color: #505050;
+    font-size: 22px;
+}
+
+.active {
+    font-weight: bold;
+
+}
+
+.text-container {
+    color: antiquewhite;
+    font-family: monospace;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 60px;
+    position: absolute;
+    left: 13%;
+    top: 42%;
+    transform: translate(-13%, -42%);
+
+}
+
+p {
+    line-height: 0px;
+    margin: 45px 0px 25px;
+}
+
+.hi {
+    font-size: 42px;
+}
+
+.text-container button {
+    width: 130px;
+    height: 42px;
+    border-radius: 10px;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 14px;
+    outline: none;
+    margin: 0px 10px;
+}
+
+.hire-btn {
+    background-color: antiquewhite;
+    border: 2px solid #373636;
+    color: #373636;
+}
+
+.down-cv {
+    background-color: antiquewhite;
+    color: #373636;
+    border: none;
+}
+
+.about-container {
+    width: 80%;
+    height: 330px;
+    background-color: #505050;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    margin: -7% auto 20px auto;
+    position: relative;
+    color: antiquewhite;
+
+}
+
+.about-text {
+    text-align: center;
+    font-family: monospace;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 0px;
+    color: antiquewhite;
+}
+
+.about-text button {
+    width: 120px;
+    height: 40px;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+    font-family: sans-serif;
+    background-color: #262525;
+}
+
+.skills-bar {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: antiquewhite;
+    display: grid;
+    height: 100%;
+
+}
+
+.skills-bar {
+    width: 600px;
+    background: #505050;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 25px 30px;
+}
+
+.skills-bar .bar {
+    margin: 20px 0;
+}
+
+.skills-bar .bar:first-child {
+    margin-top: 0px;
+}
+
+.skills-bar .bar .info {
+    margin-bottom: 5px;
+}
+
+.skills-bar .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.skills-bar .bar .progress-line {
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    transform: scaleX(0);
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05),
+        0px 1px 1px rgba(255, 255, 255, 0.8);
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line span {
+    height: 100%;
+    width: 80%;
+    background: #040404;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+
+}
+
+.bar .progress-line span::before {
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 0;
+    right: 0;
+    top: -10px;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    opacity: 0;
+    animation: shows 0.5s 1.5s linear forwards;
+}
+
+@keyframes shows {
+    100% {
+        opacity: 1;
+    }
+}
+
+.bar .progress-line span::after {
+    position: absolute;
+    right: 0;
+    top: -28px;
+    color: #fff;
+    font-size: 12px;
+    padding: 1px 8px;
+    background: #000;
+    border-radius: 3px;
+}
+
+.progress-line.html span {
+    width: 95%;
+}
+
+.progress-line.css5 span {
+    width: 80%;
+}
+
+.progress-line.javascript span {
+    width: 100%;
+}
+
+.progress-line.nodejs span {
+    width: 100%;
+}
+
+.progress-line.mysql span {
+    width: 80%;
+}
+
+.progress-line.html span::after {
+    content: "95%";
+}
+
+.progress-line.css5 span::after {
+    content: "80%";
+}
+
+.progress-line.javascript span::after {
+    content: "100%";
+}
+
+.progress-line.nodejs span::after {
+    content: "100%";
+}
+
+.progress-line.mysql span::after {
+    content: "80%";
+}
+
+.contact-me {
+    width: 100%;
+    height: 280px;
+    background-image: url(project%20in%20your%20mind.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-me p {
+    color: antiquewhite;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.contact-me button {
+    width: 200px;
+    height: 40px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 14px;
+    outline: none;
+    margin: 0px 10px;
+}
+
+footer {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+footer p {
+    font-family: fantasy;
+    color: antiquewhite;
+}
+
+.social a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6e3e3;
+    margin: 20px 10px;
+    border-radius: 50%;
+}
+
+.social {
+    display: flex;
+}
+
+.social i {
+    color: #000000;
+}
+
+.social a:hover {
+    background-color: #000000;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    transition: all ease 0.5s;
+}
+
+.social a:hover i {
+    color: #FFFFFF;
+    transition: all ease 0.5s;
+}
